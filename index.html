@@ -10,16 +10,6 @@
         background-color: black;
         color: white;
       }
-
-      .footer{
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 60px;
-          line-height: 60px;
-          background-color: #f5f5f5;
-          text-align: center;
-      }
     </style>
 
 
@@ -154,17 +144,15 @@
           ${desc}
           <small class="text-muted"> ${getDateString(moment)}  </small>
         </div>
+        <div>
         <span class="px-5"> ${amount}</span>
-        <button class="btn btn-outline Danger" onclick="DeleteItem(${moment.valueOf()}, ${amount})">Delete</button>
+        <button type="button" class="btn btn-outline-danger btn-sm" onclick="DeleteItem(${moment.valueOf()}, ${amount})">
+        <i class="fas fa-trash-alt"></i>
+        </button>
+        </div>
         </li>`
         }
       
     </script>
-
-    <footer class="footer">
-      <div class="container">
-      <span class=""> Made With ❤ By Lakshay Yadav </span> 
-    </div>
-    </footer>
 </body>
 </html>
